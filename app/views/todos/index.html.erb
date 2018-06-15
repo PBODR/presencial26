@@ -1,0 +1,11 @@
+<h1>INDEX</h1>
+<% @todos.each do |t| %>
+  <div class="well">
+    <p><%= t.description %></p>
+    <p><%= t.completed %></p>
+
+    <p><%= link_to 'Show', todo_path(t), class:'btn btn-secondary' %></p>
+
+  </div>
+<% end %>
+<%= link_to 'Crear', todos_new_path%>
