@@ -5,6 +5,8 @@
     <p><%= t.completed %></p>
 
     <p><%= link_to 'Show', todo_path(t), class:'btn btn-secondary' %></p>
+    <p><%= link_to 'Edit', todoedit_path(t), class:'btn btn-secondary' %></p>
+    <p><%= link_to 'Destroy', tododelete_path(t), method: :delete, class:'btn btn-secondary' %></p>
 
   </div>
 <% end %>
