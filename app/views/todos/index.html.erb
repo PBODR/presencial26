@@ -1,13 +1,13 @@
 <h1>INDEX</h1>
-<% @todos.each do |t| %>
-  <div class="well">
-    <p><%= t.description %></p>
-    <p><%= t.completed %></p>
 
-    <p><%= link_to 'Show', todo_path(t), class:'btn btn-secondary' %></p>
-    <p><%= link_to 'Edit', todoedit_path(t), class:'btn btn-secondary' %></p>
-    <p><%= link_to 'Destroy', tododelete_path(t), method: :delete, class:'btn btn-secondary' %></p>
-
-  </div>
-<% end %>
-<%= link_to 'Crear', todos_new_path%>
+  <% @todos.each do |t| %>
+    <div class="well">
+      <td><%= t.description %></td>
+      <td><%= t.completed %></td>
+      <td><%= link_to 'Show', todo_path(t), class:'btn btn-primary' %></td>
+      <td><%= link_to 'Edit', todoedit_path(t), class:'btn btn-info' %></td>
+      <td><%= link_to 'Destroy', tododelete_path(t), method: :delete, class:'btn btn-danger' %></td>
+      <td><%= link_to 'Completed', todocomplete_path(t), class:'btn btn-success' %></td>
+    </div>
+  <% end %>
+<%= link_to 'Crear', todos_new_path, class:'btn btn-warning'%>
